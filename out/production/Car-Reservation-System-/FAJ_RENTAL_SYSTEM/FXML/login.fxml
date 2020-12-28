@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FAJ_RENTAL_SYSTEM.LoginController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="log" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" text="Log in" textAlignment="CENTER">
+                    <font>
+                        <Font name="Consolas Bold" size="36.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="ID" alignment="CENTER" maxWidth="200.0" onKeyPressed="#GetOnPassword" promptText="Enter your email">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin></TextField>
+                <PasswordField fx:id="pass" alignment="CENTER" maxWidth="200.0" onKeyPressed="#LogIn" promptText="Password">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </PasswordField>
+                <TextField fx:id="temp" alignment="CENTER" editable="false" maxHeight="20.0" maxWidth="200.0" onKeyPressed="#LogIn" opacity="0.0" prefWidth="200.0" promptText="Password" visible="false">
+                    <VBox.margin>
+                        <Insets top="-25.0" />
+                    </VBox.margin>
+                </TextField>
+            <RadioButton fx:id="show" mnemonicParsing="false" onKeyPressed="#Full" onMousePressed="#ShowPass" onMouseReleased="#HidePass" text="Show Password">
+               <VBox.margin>
+                  <Insets left="200.0" top="20.0" />
+               </VBox.margin>
+            </RadioButton>
+                <Hyperlink fx:id="web" onAction="#GetOnSignUp" prefHeight="25.0" prefWidth="100.0" text="Create an account">
+                    <VBox.margin>
+                        <Insets right="200.0" top="-20.0" />
+                    </VBox.margin>
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding>
+               <font>
+                  <Font name="Californian FB Bold" size="12.0" />
+               </font>
+                </Hyperlink>
+                <Button fx:id="logged" minHeight="21.0" mnemonicParsing="false" onAction="#LoggedIn" onKeyPressed="#LogIn" prefHeight="21.0" prefWidth="54.0" text="Log in">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="-15.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="600.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Button fx:id="close" contentDisplay="RIGHT" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#CloseWindow" prefHeight="20.0" prefWidth="20.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="6.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="24.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMAGES/close-window-icon-14-ff0000-512.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="full" contentDisplay="RIGHT" layoutX="30.0" layoutY="10.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#FullScreen" onKeyPressed="#full2" prefHeight="20.0" prefWidth="20.0">
+               <HBox.margin>
+                  <Insets left="17.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMAGES/maximize-window-icon-18-a1a1a1-512.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="minimize" contentDisplay="RIGHT" layoutX="50.0" layoutY="10.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#MinimizeWindow" prefHeight="20.0" prefWidth="20.0">
+               <HBox.margin>
+                  <Insets left="17.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMAGES/minimize-window-icon-18-a1a1a1-512.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+1)login: (username,password)
+2)car : (Cid,name,price,numberplate,category,model,color,manufacuredate,UnloadDate,available)
+3)customer : (Cuid,name,address,CNIC,number,email,regesterDate)
+4)buy : (id,Cid,Cuid,rentedDate,ExpiryDate,rentType,payementInMonth,deposit,downpayemnt)
+5)defaulter : (id,Cid,Cuid,rentedDate,ExpiryDate,DuePayement)
